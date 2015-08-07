@@ -1,9 +1,11 @@
+#!/bin/bash
+here=$(dirname ${BASH_SOURCE[0]})
 if [ -z "$1" ];  then
     echo "Needs period" 2>&1
     exit 1
 fi;
 
 while true; do
-    irssi-dump.py $1 | notify-stream
+    $here/irssi-dump.py $1 | python $here/notify-stream.py
     sleep $1
 done;
