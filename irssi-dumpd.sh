@@ -5,7 +5,11 @@ if [ -z "$1" ];  then
     exit 1
 fi;
 
+exclude_file=~/.irssi-dumpd/excludes
+mkdir -p ~/.irssi-dumpd
+[ ! -f "$exclude_file" ] && touch $exclude_file
+
 while true; do
-    $here/irssi-dump.py $1 | python $here/notify-stream.py
+    $here/irssi-dump.py $1 | grep -vEf $exclude_file  | python $here/notify-stream.py
     sleep $1
 done;
