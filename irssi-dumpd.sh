@@ -10,6 +10,6 @@ mkdir -p ~/.irssi-dumpd
 [ ! -f "$exclude_file" ] && touch $exclude_file
 
 while true; do
-    $here/irssi-dump.py $1 | grep -vEf $exclude_file  | python $here/notify-stream.py
+    python -u $here/irssi-dump.py --exclude-file $exclude_file $1 | python $here/notify-stream.py
     sleep $1
 done;
