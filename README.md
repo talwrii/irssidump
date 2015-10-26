@@ -4,17 +4,20 @@
 
 Tool to periodically dump irc messages from irssi via libnotify.
 
-## Purpose
+## Motivation
 
-Electronic communication is a complicated beast, one has to balance the value of 
+Electronic communication is a complicated beast: one has to balance the value of 
 of quick contactability with the overhead of interruption.
 
-IRC is a particularly interesting case in that the point of using 
+IRC is a particularly interesting case. The point of using 
 irc *and* e-mail is to allow two forms of communication, one 
-slow and reliable, the other fast and unreliable.
+slow and reliable, the other fast and unreliable. But often
+IRC channels can become sufficiently noisy that immediate
+interruptions become too distracting, so instead one must
+batch up checking of IRC messages.
 
-"I'll just check this every 15 minutes or so", is a surprising difficult 
-aspiration to acheive, and general tends to become: "I will check this 
+However, "I'll just check this every 15 minutes or so" is a surprising difficult 
+aspiration to acheive, and general tends to become "I will check this 
 once a day" or "I will continually check this". This tool tries to 
 help you reach a happy medium.
 
