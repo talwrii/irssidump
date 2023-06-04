@@ -1,4 +1,4 @@
-#irssi-dump
+# irssi-dump
 
 ## Description
 
